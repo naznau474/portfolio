@@ -1,4 +1,4 @@
-// Меню для мобильных устройств
+
 document.addEventListener('DOMContentLoaded', function() {
     const menuBtn = document.querySelector('.menu-btn');
     const navLinks = document.querySelector('.nav-links');
@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
         navLinks.classList.toggle('active');
     });
     
-    // Закрыть меню при клике на ссылку
     const navItems = document.querySelectorAll('.nav-links a');
     navItems.forEach(item => {
         item.addEventListener('click', function() {
@@ -15,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Плавная прокрутка
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -47,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
     
-    // Наблюдаем за карточками
     const cards = document.querySelectorAll('.cv-card, .project-card');
     cards.forEach(card => {
         observer.observe(card);
@@ -60,16 +57,16 @@ document.addEventListener('DOMContentLoaded', function() {
         yearSpan.textContent = yearSpan.textContent.replace('2024', currentYear);
     }
     
-    // Простой пример "flip card" для компонентов компьютера
+   
     const createFlipCardExample = () => {
-        // Этот код можно использовать на отдельной странице с компонентами компьютера
+       
         console.log("Flip card example ready");
     };
     
     createFlipCardExample();
 });
 
-// Простая игра "Угадай число" (Python концепция в JS)
+
 function numberGuessingGame() {
     const secretNumber = Math.floor(Math.random() * 100) + 1;
     let attempts = 0;
@@ -106,14 +103,12 @@ function numberGuessingGame() {
     };
 }
 
-// Пример использования игры
 const game = numberGuessingGame();
 console.log("Eksempel på spilllogikk:");
 console.log(game.guess(50));
 console.log(game.guess(75));
 console.log(game.guess(63));
 
-// Эффект параллакса для героя
 window.addEventListener('scroll', function() {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero');
